@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-self</title>
+  <style>
+
+    body {
+      background-color: #ccc;
+    }
+    h4 {
+      padding-top: 30px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex-example {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background-color: burlywood;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 300px; /* Espaço disponível no eixo cruzado */
+      margin-bottom: 40px;
+      align-items: flex-start; /* Para visualizar melhor o stretch */
+    }
+
+    .item {
+      background-color: green;
+      border: solid 1px red;
+      text-align: center;
+      width: 80px;
+      color: white;
+      font-weight: bold;
+      /* Removido height e line-height para o stretch funcionar */
+      padding: 10px 0;
+      margin: 5px 0;
+    }
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>align-self</h1>
+
+  <div class="container">
+    <div class="item" style="align-self: auto;">Item A (auto)</div>
+    <div class="item" style="align-self: flex-start;">Item B (flex-start)</div>
+    <div class="item" style="align-self: flex-end;">Item C (flex-end)</div>
+    <div class="item" style="align-self: center;">Item D (center)</div>
+    <div class="item" style="align-self: baseline;">Item E (baseline)</div>
+    <div class="item" style="align-self: stretch;">Item F (stretch)</div>
+  </div>
+
+  <div class="content">
+    <p>O <strong>align-self</strong> permite que cada item dentro de um container flex seja alinhado individualmente no eixo cruzado, sobrescrevendo o align-items do container.</p>
+
+    <div class="flex-example">
+      <h4>align-self: auto → herda o align-items do container</h4>
+    </div>
+
+    <div class="flex-example">
+      <h4>align-self: flex-start → o item fica no início do eixo cruzado</h4>
+    </div>
+
+    <div class="flex-example">
+      <h4>align-self: flex-end → o item fica no final do eixo cruzado</h4>
+    </div>
+
+    <div class="flex-example">
+      <h4>align-self: center → o item fica centralizado no eixo cruzado</h4>
+    </div>
+
+    <div class="flex-example">
+      <h4>align-self: baseline → o item se alinha à linha de base do texto</h4>
+    </div>
+
+    <div class="flex-example">
+      <h4>align-self: stretch → o item ocupa todo o espaço disponível no eixo cruzado</h4>
+    </div>
+  </div>
+
+</body>
+</html>
+

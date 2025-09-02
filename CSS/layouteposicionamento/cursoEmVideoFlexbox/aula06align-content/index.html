@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Flexible Box</title>
+  <style>
+    h4 {
+      padding-top: 30px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex-example {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background-color: burlywood;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .item {
+      background-color: green;
+      border: solid 1px red;
+      text-align: center;
+    }
+    hr {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>align-content</h1>
+
+  <div class="container">
+    <div class="item">caixa de letra A</div>
+    <div class="item">caixa de letra B</div>
+    <div class="item">caixa de letra C</div>
+    <div class="item">caixa de letra D</div>
+    <div class="item">caixa de letra E</div>
+    <div class="item">caixa de letra F</div>
+  </div>
+
+  <div class="content">
+    <p>só funciona quando há mais de uma linha (itens quebrando linha). Ele controla como essas linhas inteiras ficam distribuídas no eixo cruzado. igual no justify-content e align-items ele tambem tems os atributos (flex-start,flex-end, center...)</p>
+
+    <div class="flex-example">
+      <h4>O align-content vem por padrão o stretch que faz o item ocupar todo o espaço disponivel no cross-axis </h4>
+      <img src="align-items-stretch.png" height="300px">
+    </div>
+
+    <div class="flex-example">
+      <h4>O flex-start no align-content faz que todos os itens fiquem grudados no inicio do cross-axis</h4>
+      <img src="align-content-flex-start.png" height="300px">
+    </div>
+
+    <div class="flex-example">
+      <h4>O flex-end no align-content faz que todos os itens fiquem grudados no final do cross-axis</h4>
+      <img src="align-content-flex-end.png" height="300px">
+    </div>
+
+    <div class="flex-example">
+      <h4>O center no align-items faz que todos os itens fiquem grudados no meio do cross-axis</h4>
+      <img src="align-content-center.png" height="300px">
+    </div>
+
+    <div class="flex-example">
+      <h4>O space-between faz a primeira linha no início, última no fim, e as demais distribuídas igualmente no meio.</h4>
+      <img src="align-content-space-between.png" height="300px">
+    </div>
+
+    <div class="flex-example">
+      <h4>O space-evenly faz todas as linhas com o mesmo espaço entre si e nas extremidades. </h4>
+      <img src="align-content-space-evenly.png" height="300px">
+    </div>
+
+    <div class="flex-example">
+      <h4>O space-around faz linhas distribuídas com espaço igual em volta (metade nas extremidades)</h4>
+      <img src="align-content-spaceparound.png" height="300px">
+    </div>
+
+
+  </div>
+
+</body>
+</html>
+

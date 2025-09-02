@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flexible Box</title>
+  </head>
+  <body>
+    <h1>Flex-wrap</h1>
+
+    <div class="container">
+      <div class="item">caixa de letra A</div>
+      <div class="item">caixa de letra B</div>
+      <div class="item">caixa de letra C</div>
+      <div class="item">caixa de letra D</div>
+      <div class="item">caixa de letra E</div>
+      <div class="item">caixa de letra F</div>
+    </div>
+
+    <p>O Flex-wrap serve para controlar se o o conteudo vai encapsula ou nao qunado o tamanho do container nao couber os itens filhos, por padrão vem configurado o no-wrap</p>
+    <p>Se o nowrap estiver ativo os itens vao diminuir de tamanho para caber dentro do container</p>
+    <p>Se o wrap estiver ativo os itens vão se manter do mesmo tamanho mas vai quebrar o layout no sentido do 'cross-axis'</p>
+    <p>Se o wrap-reverse estiver ativo o item vai se manter do mesmo tamanho mas vai quebrar o layout no sentido contrario ao 'cross-axis'</p>
+    <p>E tem o flew-flow que é a junção do Flex-wrap e flew-direvrion</p>
+
+
+
+    <h2>Exemplo em imagens</h2>
+
+    <h4>flew-flow</h4>
+    <img src="flex-flow.png" alt="">
+    <h4>wrap</h4>
+    <img src="wrap.png" alt="" height="300">
+
+    <h4>wrap-reversea</h4>
+    <img src="wrap-reverse.png" alt="" height="300">    
+  </body>
+</html>

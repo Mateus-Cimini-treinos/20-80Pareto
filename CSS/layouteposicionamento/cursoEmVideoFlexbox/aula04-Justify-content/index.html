@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Flexible Box</title>
+  <style>
+    h4 {
+      padding-top: 30px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex-example {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background-color: burlywood;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .item {
+      background-color: green;
+      border: solid 1px red;
+      text-align: center;
+    }
+    hr {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Flex-wrap</h1>
+
+  <div class="container">
+    <div class="item">caixa de letra A</div>
+    <div class="item">caixa de letra B</div>
+    <div class="item">caixa de letra C</div>
+    <div class="item">caixa de letra D</div>
+    <div class="item">caixa de letra E</div>
+    <div class="item">caixa de letra F</div>
+  </div>
+
+  <div class="content">
+    <p>Justify-content serve para alinhar o conteudo do container com base no comando que vem depois e o main-axis (eixo-central)</p>
+
+    <div class="flex-example"> 
+      <h4>O flex-start garante que o primeiro item fique grudado com o inicio do main-axis</h4>
+      <img src="flex-start.png" alt="Exemplo flex-start" height="300px">
+    </div>
+
+    <div class="flex-example">   
+      <h4>O flex-end garante que o ultimo item fique colado no final do main-axis</h4>
+      <img src="flex-end.png" alt="Exemplo flex-end" height="300px">
+    </div>
+
+    <div class="flex-example">     
+      <h4>E o center vai manter o item no meio do main axis</h4>
+      <img src="center.png" alt="Exemplo center" height="300px">
+    </div>
+
+    <div class="flex-example">
+      <h4>O space-between vai colocar o primeiro item no inicio e o ultimo item no final e vai dividir o resto do espaço para os outros itens</h4>
+      <img src="space-between.png" alt="Exemplo space-between" height="300px">
+    </div>
+
+    <div class="flex-example">       
+      <h4>O space-evenly serve para dividir o espaço como o space-between mas adiciona espaço antes e no final do container</h4>
+      <img src="space-evenly.png" height="300px">
+    </div>
+
+      <div class="flex-example">
+        <h4>O space-around fuciona como o evelyn mas os espaço da extremidade é a metade do tamanho do espaço entre itens</h4>
+        <img src="space-around.png" height="300px" alt="">
+      </div>
+
+      <div class="flex-example">
+        <h4>E fuciona idepedente de como estiver sendo organizado o conteudo, abaixo um exemplo de como fucionaria caso estivesse usando o collumn</h4>
+        <img src="justify-content-com-collumn.png" height="300px" alt="">
+      </div>
+
+      <hr>
+    <p>align-items serve para alinhar o conteudo do container com base no comando que vem depois e no cross-axis (eixo-transversal)</p>
+
+      <div class="flex-example">
+        <h4>O padrão do align-items é vir ativado o stretch, que faz todos os item se esticarem ao maximo para ocupar todo o espaço</h4>
+        <img src="stretch.png" height="300px" alt="">
+      </div>
+
+ <div class="flex-example"> 
+      <h4>O flex-start no align-items garante que o primeiro item fique grudado com o inicio do cross-axis</h4>
+      <img src="align-items-flex-start.png" alt="Exemplo flex-start" height="300px">
+    </div>
+
+   <div class="flex-example">   
+      <h4>O flex-end no align-item garante que o ultimo item fique colado no final do cross-axis</h4>
+      <img src="align-item-flex-end.png" alt="Exemplo flex-end" height="300px">
+    </div>
+
+    <div class="flex-example">     
+      <h4>E o center vai manter o item no meio do cross-axis</h4>
+      <img src="align-items-center.png " alt="Exemplo center" height="300px">
+    </div>
+
+
+  </div>
+
+</body>
+</html>
+

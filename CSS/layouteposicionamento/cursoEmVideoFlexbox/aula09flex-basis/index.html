@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-basis</title>
+  <style>
+    h4 {
+      padding-top: 30px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex-example {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background-color: burlywood;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 40px;
+      padding: 10px;
+    }
+
+    .item {
+      background-color: green;
+      border: solid 1px red;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      padding: 20px 0;
+      flex-grow: 0; /* Para deixar o flex-basis mais evidente */
+    }
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>flex-basis</h1>
+
+  <div class="container">
+    <div class="item" style="flex-basis: 50px;">Item A (50px)</div>
+    <div class="item" style="flex-basis: 100px;">Item B (100px)</div>
+    <div class="item" style="flex-basis: 150px;">Item C (150px)</div>
+    <div class="item" style="flex-basis: 25%;">Item D (25%)</div>
+    <div class="item" style="flex-basis: 50%;">Item E (50%)</div>
+    <div class="item" style="flex-basis: auto;">Item F (auto)</div>
+  </div>
+
+  <div class="content">
+    <p>O <strong>flex-basis</strong> define o tamanho inicial de um item antes de o espaço extra ser distribuído pelo container flex. Ele pode ser em pixels, porcentagem ou 'auto'.</p>
+
+    <div class="flex-example">
+      <h4>flex-basis: 50px → o item começa com 50 pixels de largura</h4>  
+    </div>
+
+    <div class="flex-example">
+      <h4>flex-basis: 100px → o item começa com 100 pixels de largura</h4>  
+    </div>
+
+    <div class="flex-example">
+      <h4>flex-basis: 150px → o item começa com 150 pixels de largura</h4>  
+    </div>
+
+    <div class="flex-example">
+      <h4>flex-basis: 25% → o item ocupa 25% do container</h4>  
+    </div>
+
+    <div class="flex-example">
+      <h4>flex-basis: 50% → o item ocupa 50% do container</h4>  
+    </div>
+
+    <div class="flex-example">
+      <h4>flex-basis: auto → o tamanho do item é definido pelo conteúdo ou por width</h4>  
+    </div>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+div.container {
+  background-color: burlywood;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap ;
+}
+
+div.item {
+  background-color: green;
+  border: solid 1px red;
+  flex: auto;
+  text-align: center;
+}
