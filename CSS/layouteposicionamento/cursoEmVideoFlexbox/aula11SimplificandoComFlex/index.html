@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: shorthand flex</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1, h2 {
+      margin: 20px 0 10px;
+    }
+
+    .container {
+      background-color: burlywood;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 40px;
+      padding: 10px;
+    }
+
+    .item {
+      background-color: green;
+      border: solid 1px red;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      padding: 20px 0;
+    }
+
+    .desc {
+      margin-bottom: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Shorthand <code>flex</code></h1>
+
+    <div class="desc">
+      <p>A propriedade <code>flex</code> é um atalho para configurar <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code>.</p>
+      <p><strong>Sintaxe:</strong> <code>flex: grow shrink basis;</code></p>
+    </div>
+
+    <h2>Exemplo 1 – flex: 1</h2>
+    <p>Equivale a <code>flex-grow: 1; flex-shrink: 1; flex-basis: 0;</code>. Os itens crescem igualmente dividindo o espaço.</p>
+
+    <div class="container">
+      <div class="item" style="flex: 1;">Flex 1</div>
+      <div class="item" style="flex: 1;">Flex 1</div>
+      <div class="item" style="flex: 1;">Flex 1</div>
+    </div>
+
+    <h2>Exemplo 2 – flex: 2</h2>
+    <p>Equivale a <code>flex-grow: 2; flex-shrink: 1; flex-basis: 0;</code>. O item com <code>flex: 2</code> cresce o dobro dos outros.</p>
+
+    <div class="container">
+      <div class="item" style="flex: 1;">Flex 1</div>
+      <div class="item" style="flex: 2;">Flex 2</div>
+      <div class="item" style="flex: 1;">Flex 1</div>
+    </div>
+
+    <h2>Exemplo 3 – flex: 0 0 200px</h2>
+    <p>Equivale a <code>flex-grow: 0; flex-shrink: 0; flex-basis: 200px;</code>. O item terá largura fixa de 200px e não vai nem crescer nem encolher.</p>
+
+    <div class="container">
+      <div class="item" style="flex: 1;">Flex 1</div>
+      <div class="item" style="flex: 0 0 200px;">Fixo 200px</div>
+      <div class="item" style="flex: 1;">Flex 1</div>
+    </div>
+
+    <h2>Exemplo 4 – flex: auto</h2>
+    <p>Equivale a <code>flex: 1 1 auto;</code>. O tamanho inicial é baseado no conteúdo, mas ainda pode crescer e encolher.</p>
+
+    <div class="container">
+      <div class="item" style="flex: auto;">Texto curto</div>
+      <div class="item" style="flex: auto;">Um item com conteúdo muito maior para ocupar mais espaço</div>
+      <div class="item" style="flex: auto;">Curto</div>
+    </div>
+
+    <h2>Exemplo 5 – flex: none</h2>
+    <p>Equivale a <code>flex: 0 0 auto;</code>. O item não cresce, não encolhe, e o tamanho é baseado no conteúdo.</p>
+
+    <div class="container">
+      <div class="item" style="flex: 1;">Flex 1</div>
+      <div class="item" style="flex: none;">Tamanho pelo conteúdo</div>
+      <div class="item" style="flex: 1;">Flex 1</div>
+    </div>
+
+    <h2>Exemplo 6 – flex: initial</h2>
+    <p>Equivale a <code>flex: 0 1 auto;</code>. O item usa o tamanho do conteúdo (ou width definido), não cresce, mas pode encolher.</p>
+
+    <div class="container" style="border: 2px solid black;">
+      <div class="item" style="flex: initial;">Item Initial</div>
+      <div class="item" style="flex: 1;">Item Flex 1</div>
+      <div class="item" style="flex: initial;">Item Initial</div>
+    </div>
+
+    <p>Os itens com <code>flex: initial</code> mantêm o tamanho do conteúdo, enquanto o item com <code>flex: 1</code> cresce para ocupar o espaço restante.</p>
+
+
+    <h2>Resumo</h2>
+    <ul>
+      <li><code>flex: 1</code> → divide o espaço igualmente.</li>
+      <li><code>flex: 2</code> → cresce o dobro dos itens com <code>flex: 1</code>.</li>
+      <li><code>flex: 0 0 Xpx</code> → tamanho fixo.</li>
+      <li><code>flex: auto</code> → cresce e encolhe baseado no conteúdo.</li>
+      <li><code>flex: none</code> → fica fixo no tamanho do conteúdo.</li>
+    </ul>
+
+    <p>exemplo:</p>
+    <img src="flex.png" height="250px" alt="">
+  </body>
+</html>
+
