@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: flex-grow e flex-shrink</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1, h2 {
+      margin: 20px 0 10px;
+    }
+
+    .container {
+      background-color: burlywood;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 40px;
+      padding: 10px;
+    }
+
+    .item {
+      background-color: green;
+      border: solid 1px red;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      padding: 20px 0;
+      flex-basis: 100px; /* tamanho inicial */
+    }
+
+    .desc {
+      margin-bottom: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>flex-grow e flex-shrink</h1>
+
+    <div class="desc">
+      <p><strong>flex-grow</strong>: define quanto o item pode <u>crescer</u> para ocupar o espaço sobrando no container.</p>
+      <p><strong>flex-shrink</strong>: define quanto o item pode <u>encolher</u> quando o espaço não é suficiente.</p>
+    </div>
+
+    <h2>Exemplo 1 – flex-grow</h2>
+    <p>Itens começam com <code>flex-basis: 100px</code>. O espaço livre será distribuído proporcionalmente ao valor de <code>flex-grow</code>.</p>
+
+    <div class="container">
+      <div class="item" style="flex-grow: 1;">Grow 1</div>
+      <div class="item" style="flex-grow: 2;">Grow 2</div>
+      <div class="item" style="flex-grow: 3;">Grow 3</div>
+    </div>
+
+    <p>Neste exemplo: o espaço extra é dividido na proporção <strong>1:2:3</strong>.</p>
+
+    <h2>Exemplo 2 – flex-shrink</h2>
+    <p>Itens também começam com <code>flex-basis: 200px</code>, mas o container é menor. O espaço perdido será reduzido na proporção do <code>flex-shrink</code>.</p>
+
+    <div class="container" style="width: 400px; border: 2px solid black;">
+      <div class="item" style="flex-basis: 200px; flex-shrink: 1;">Shrink 1</div>
+      <div class="item" style="flex-basis: 200px; flex-shrink: 2;">Shrink 2</div>
+      <div class="item" style="flex-basis: 200px; flex-shrink: 3;">Shrink 3</div>
+    </div>
+
+    <p>Aqui: o espaço é insuficiente, então os itens diminuem proporcionalmente em <strong>1:2:3</strong>.</p>
+
+    <h2>Resumo</h2>
+    <ul>
+      <li><strong>flex-grow</strong> → controla crescimento quando sobra espaço.</li>
+      <li><strong>flex-shrink</strong> → controla redução quando falta espaço.</li>
+      <li>Ambos funcionam junto com <strong>flex-basis</strong> (tamanho inicial).</li>
+    </ul>
+  </body>
+</html>
+
