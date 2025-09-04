@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula de Display Grid</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  .container {
+    display: grid;
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+
+  .item {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  img {
+    max-width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<h1>Aula de Display Grid</h1>
+
+<section>
+  <h2>Forma tradicional</h2>
+  <p>Usando <code>grid-template-columns: auto auto auto;</code> e <code>grid-template-rows: 100px 100px 100px;</code></p>
+  
+  <div class="container" style="grid-template-columns: auto auto auto; grid-template-rows: 100px 100px 100px;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div>
+
+  <img src="antigo.png" alt="Exemplo grid tradicional">
+</section>
+
+<section>
+  <h2>Forma com repeat()</h2>
+  <p>Usando <code>grid-template-columns: repeat(3, auto);</code> e <code>grid-template-rows: repeat(3, 100px);</code></p>
+
+  <div class="container" style="grid-template-columns: repeat(3, auto); grid-template-rows: repeat(3, 100px);">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div>
+
+  <img src="novo.png" alt="Exemplo grid com repeat()">
+</section>
+
+    <section>
+  <h2>Exemplo com unidades <code>fr</code></h2>
+  <p>Suponha uma área de 1500px de largura dividida em três colunas usando <code>1fr 2fr 1fr</code>:</p>
+  
+  <div class="container" style="display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 10px; width: 1500px;">
+    <div class="item">1fr</div>
+    <div class="item">2fr</div>
+    <div class="item">1fr</div>
+  </div>
+
+  <p>Explicação:</p>
+  <ul>
+    <li>O primeiro item ocupa <strong>1/4</strong> da largura (1fr de 4fr totais).</li>
+    <li>O segundo item ocupa <strong>2/4</strong> (2fr de 4fr totais).</li>
+    <li>O terceiro item ocupa <strong>1/4</strong> da largura (1fr de 4fr totais).</li>
+  </ul>
+
+  <img src="fração.png" alt="Exemplo de grid usando fr">
+</section>
+
+
+</body>
+</html>
+
