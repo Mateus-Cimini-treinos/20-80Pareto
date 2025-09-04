@@ -1,104 +1,112 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aula: Propriedades do Grid Container</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 20px;
-      line-height: 1.6;
-      color: #333;
-    }
+<DOCTYPE html>
+  <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Aula: Propriedades do Grid Container</title>
+      <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        margin: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
 
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+      h1, h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
 
-    .intro, .section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+      .intro, .section {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
 
-    .section img {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-      border-radius: 8px;
-    }
+      .section img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        border-radius: 8px;
+      }
 
-    code {
-      background: #eee;
-      padding: 2px 5px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-  </style>
-</head>
-<body>
-  <h1>Propriedades do Grid Container</h1>
+      code {
+        background: #eee;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      </style>
+    </head>
+    <body>
+      <h1>Propriedades do Grid Container</h1>
 
-  <div class="intro">
-    <p>
-      Vamos analisar as principais propriedades usadas para criar um layout em CSS Grid.
-      O exemplo a seguir é de um container com <strong>7 itens</strong>, organizado em colunas e linhas.
-    </p>
-    <p>
-      Código usado:
-    </p>
-    <pre>
-div.container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 100px 100px 100px;
-  grid-gap: 20px;
-}
-    </pre>
-  </div>
+      <div class="intro">
+        <p>
+          Vamos analisar as principais propriedades usadas para criar um layout em CSS Grid.
+          O exemplo a seguir é de um container com <strong>7 itens</strong>, organizado em colunas e linhas.
+        </p>
+        <p>
+          Código usado:
+        </p>
+        <pre>
+          div.container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          grid-template-rows: 100px 100px 100px;
+          grid-gap: 20px;
+          }
+        </pre>
+      </div>
 
-  <div class="section">
-    <h2>display: grid;</h2>
-    <p>
-      Essa propriedade transforma a <code>div</code> em um <strong>Grid Container</strong>. 
-      A partir desse momento, todos os elementos filhos se tornam <em>Grid Items</em>, que podem ser organizados em linhas e colunas.
-    </p>
-    <img src="display-grid.png" alt="Exemplo do uso de display grid">
-  </div>
+      <div class="section">
+        <h2>display: grid;</h2>
+        <p>
+          Essa propriedade transforma a <code>div</code> em um <strong>Grid Container</strong>. 
+          A partir desse momento, todos os elementos filhos se tornam <em>Grid Items</em>, que podem ser organizados em linhas e colunas.
+        </p>
+        <img src="display-grid.png" alt="Exemplo do uso de display grid">
+      </div>
 
-  <div class="section">
-    <h2>grid-template-columns: auto auto auto;</h2>
-    <p>
-      Define que o grid terá <strong>3 colunas</strong>.  
-      Cada <code>auto</code> faz com que a largura da coluna seja ajustada automaticamente de acordo com o conteúdo.
-    </p>
-    <img src="grid-template-column-auto-auto-auto.png" alt="Exemplo de grid-template-columns">
-  </div>
+      <div class="section">
+        <h2>grid-template-columns: auto auto auto;</h2>
+        <p>
+          Define que o grid terá <strong>3 colunas</strong>.  
+          Cada <code>auto</code> faz com que a largura da coluna seja ajustada automaticamente de acordo com o conteúdo.
+        </p>
+        <img src="grid-template-column-auto-auto-auto.png" alt="Exemplo de grid-template-columns">
+      </div>
 
-  <div class="section">
-    <h2>grid-template-rows: 100px 100px 100px;</h2>
-    <p>
-      Define que o grid terá <strong>3 linhas</strong>, cada uma com altura fixa de <code>100px</code>.  
-      Isso organiza os itens de cima para baixo em faixas de tamanho igual.
-    </p>
-    <img src="grid-template-rows-100px.png" alt="Exemplo de grid-template-rows">
-  </div>
+      <div class="section">
+        <h2>grid-template-rows: 100px 100px 100px;</h2>
+        <p>
+          Define que o grid terá <strong>3 linhas</strong>, cada uma com altura fixa de <code>100px</code>.  
+          Isso organiza os itens de cima para baixo em faixas de tamanho igual.
+        </p>
+        <img src="grid-template-rows-100px.png" alt="Exemplo de grid-template-rows">
+      </div>
 
-  <div class="section">
-    <h2>grid-gap: 20px;</h2>
-    <p>
-      Define o espaçamento entre linhas e colunas do grid.  
-      Nesse caso, cada item tem um espaço de <code>20px</code> entre si, deixando o layout mais organizado.
-    </p>
-    <img src="grid-gap.png" alt="Exemplo de grid-gap">
-  </div>
+      <div class="section">
+        <h2>grid-gap: 20px;</h2>
+        <p>
+          Define o espaçamento entre linhas e colunas do grid.  
+          Nesse caso, cada item tem um espaço de <code>20px</code> entre si, deixando o layout mais organizado.
+        </p>
+        <img src="grid-gap.png" alt="Exemplo de grid-gap">
+      </div>
 
-</body>
-</html>
+      <div class="section">
+        <h2>Bonus</h2>
+        <p>
+          nessa imagem mostra outras propriedades bonus que ja tem no flex-box
+        </p>
+        <img src="maisPropriedadesdoGridLayout.png" alt="">
+      </div>
+
+    </body>
+  </html>
 
