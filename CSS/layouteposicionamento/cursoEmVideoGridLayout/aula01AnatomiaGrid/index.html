@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Anatomia do Grid</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: justify;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .section img {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Anatomia do Grid</h1>
+
+    <div class="intro">
+      <p>
+        O <strong>CSS Grid Layout</strong> é um sistema bidimensional que permite criar layouts mais flexíveis e organizados.
+        Ele possibilita trabalhar tanto com linhas quanto com colunas, facilitando a distribuição dos elementos na página.
+        Para entender como o grid funciona, é importante conhecer sua anatomia: os elementos que compõem sua estrutura.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Grid Container</h2>
+      <p>
+        O <strong>Grid Container</strong> é o elemento que envolve toda a grade. Ao aplicar a propriedade <code>display: grid;</code>,
+        ele se torna o contêiner responsável por definir o contexto em que os itens do grid serão organizados.
+      </p>
+      <img src="grid-container.png" alt="Exemplo de Grid Container">
+    </div>
+
+    <div class="section">
+      <h2>Grid Item</h2>
+      <p>
+        Os <strong>Grid Items</strong> são os elementos filhos diretos do container. Eles são posicionados dentro da grade,
+        podendo ocupar uma ou mais células conforme a configuração definida.
+      </p>
+      <img src="grid-item.png" alt="Exemplo de Grid Item">
+    </div>
+
+    <div class="section">
+      <h2>Grid Track</h2>
+      <p>
+        Um <strong>Grid Track</strong> é o espaço entre duas linhas adjacentes da grade. Pode ser tanto uma linha horizontal (row track)
+        quanto vertical (column track). É basicamente a "faixa" onde os elementos ficam posicionados.
+      </p>
+      <img src="grid-track.png" alt="Exemplo de Grid Track">
+    </div>
+
+    <div class="section">
+      <h2>Grid Row</h2>
+      <p>
+        As <strong>Grid Rows</strong> são as linhas horizontais da grade. Elas organizam os elementos de cima para baixo,
+        ajudando a estruturar o layout verticalmente.
+      </p>
+      <img src="grid-row.png" alt="Exemplo de Grid Row">
+    </div>
+
+    <div class="section">
+      <h2>Grid Column</h2>
+      <p>
+        As <strong>Grid Columns</strong> são as colunas verticais da grade. Elas organizam os elementos da esquerda para a direita,
+        ajudando a estruturar o layout horizontalmente.
+      </p>
+      <img src="grid-column.png" alt="Exemplo de Grid Column">
+    </div>
+
+    <div class="section">
+      <h2>Grid Lines</h2>
+      <p>
+        As <strong>Grid Lines</strong> são as linhas que dividem a grade em linhas e colunas. São usadas para posicionar
+        os elementos com precisão dentro do grid, através de propriedades como <code>grid-row-start</code> ou <code>grid-column-end</code>.
+      </p>
+      <img src="grid-lines.png" alt="Exemplo de Grid Lines">
+    </div>
+
+  </body>
+</html>
+
